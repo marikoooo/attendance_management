@@ -60,3 +60,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'slim-rails'
 
 gem 'hirb'
+
+gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
+
+gem 'seed-fu', '~> 2.3'
