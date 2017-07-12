@@ -1,0 +1,59 @@
+<h2 class="signup-text">User Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: user_registration_path)do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday %><br />
+    <%= f.text_field :birthday, class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, [["female", "female"], ["man", "man"], ["LGBT", "LGBT"] ], prompt: "Select a gender from a list", class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contract %><br />
+    <%= f.select :contract, [["full-timer worker", "full-timer worker"], ["contract employee", "contract employee"], ["temporary employee", "temporary employee"], ["part-time worker", "part-time worker"] ], prompt: "Select a contract from a list", class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email, class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %><br />
+    <%= f.text_field :phone, class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "input-size" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :encrypted_password, autocomplete: "off", class: "input-size" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "submit-btn" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>

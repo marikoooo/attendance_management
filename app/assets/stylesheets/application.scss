@@ -68,3 +68,68 @@
 	font-family: 'bookos';
 	color: #fffaf0;
 }
+
+/* user form */
+
+.signup-text{
+	font-size: 45px;
+	padding-bottom: 20px;
+}
+
+label{
+	font-weight: 600;
+}
+
+select{
+	width: 300px;
+	height: 30px;
+	font-size: 15px;
+	margin-bottom: 20px;
+	border: inset 2px #c5c5c5;
+	border-radius: 3px;
+}
+
+option:first-of-type{
+	color: red;
+}
+
+
+.input-size{
+	width: 300px;
+	height: 30px;
+	font-size: 15px;
+	margin-bottom: 20px;
+	border: inset 2px #c5c5c5;
+	border-radius: 3px;
+}
+
+.submit-btn{
+	border: 1px solid #000;
+	font-size: 20px;
+	color: #d5d5d5;
+	padding: 5px 20px;
+	margin-bottom: 50px;
+	background: radial-gradient(ellipse at center, #ff1a00 0%,#e1102d 38%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	border-radius: 5px;
+}
+
+.submit-btn:hover{
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
