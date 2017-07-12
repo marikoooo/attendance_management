@@ -4,7 +4,13 @@ h1 hello world! Inc.
     - if admin_signed_in?
       = link_to 'Manager Area', admin_path
     - else
-      = link_to 'Log in for Admin', new_admin_session_path
+      = link_to 'Admin Log in', new_admin_session_path
+    |  | 
+    - if user_signed_in?
+      = link_to 'User Log out', destroy_user_session_path, method: :delete
+      = link_to 'User Account', edit_user_registration_path
+    - else
+      = link_to 'User Log in', new_user_session_path
 .top-image
   .top-text
     h1 Attendance

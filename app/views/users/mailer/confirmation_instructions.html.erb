@@ -1,0 +1,19 @@
+<p><%= @user.name %>さん</p>
+<p>勤怠管理システムへようこそ。</p>
+<br>
+<p>以下のメールアドレス・パスワードを使ってログインしてください。</p>
+<p>
+  メールアドレス：
+  <%= @email %>
+</p>
+<p>
+  パスワード：
+  <%= @user.encrypted_password %>
+</p>
+<p>
+  ログインURL:
+  <%= link_to 'hello world Inc', confirmation_url(@resource, confirmation_token: @token) %>
+</p>
+<br>
+<p>なお、ログイン後は必ずパスワードを変更するようにしてください。</p>
+

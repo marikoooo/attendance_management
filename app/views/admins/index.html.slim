@@ -1,5 +1,7 @@
 h1 Admin Page
 .clearfix
   .nav-box
+    = link_to 'Home', root_path
+    |  | 
     - if admin_signed_in?
         = link_to 'Log out', destroy_admin_session_path, method: :delete
